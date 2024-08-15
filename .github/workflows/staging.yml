@@ -1,4 +1,4 @@
-name: Run Tests on Staging Branch
+name: CI Pipeline
 
 on:
   push:
@@ -16,11 +16,6 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-      with:
-        submodules: true 
-
-    - name: Initialize Submodules
-      run: git submodule update --init --recursive
 
     - name: Set up Python
       uses: actions/setup-python@v4
